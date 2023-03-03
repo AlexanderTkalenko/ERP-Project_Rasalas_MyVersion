@@ -4,18 +4,15 @@ import com.erp.pages.BasePage;
 import com.erp.pages.LoginPage;
 import com.erp.utilities.ConfigurationReader;
 import com.erp.utilities.Driver;
-import io.cucumber.java.en.*;
+import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 import org.junit.Assert;
-import org.openqa.selenium.WebElement;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class modulesStepDefs {
 
 
 
-    @Given("the user is oo login page")
+    @Given("the user is on login page")
     public void the_user_is_oo_login_page() {
         Driver.getDriver().get(ConfigurationReader.getProperty("env.url"));
     }
@@ -30,8 +27,8 @@ public class modulesStepDefs {
     BasePage basePage = new BasePage();
 
 
-    @Then("verify all enable modules equals {int}")
-    public void verifyAllEnableModulesEquals(int numberModules) {
-        Assert.assertTrue(basePage.modulesList.size() == numberModules);
+    @Then("verify access to all main modules - {int}")
+    public void verifyAccessToAllMainModules(int numberModules) {
+        Assert.assertEquals(basePage.modulesList.size(), numberModules);
     }
 }

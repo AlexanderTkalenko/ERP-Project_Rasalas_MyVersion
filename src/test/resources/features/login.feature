@@ -7,7 +7,7 @@ Feature: Users should be able to login
 
   Scenario Outline: Verify login with different user types
     Given the user logged in as "<userType>"
-    Then the user should be see "<expectedType>" discuss module as dashboard
+    Then account holder name should be "<expectedType>"
     Examples:
       | userType         | expectedType       |
       | posmanager       | POSManager23       |

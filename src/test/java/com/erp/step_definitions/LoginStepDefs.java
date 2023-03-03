@@ -6,6 +6,7 @@ import com.erp.utilities.ConfigurationReader;
 import com.erp.utilities.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import org.junit.Assert;
 
 public class LoginStepDefs {
@@ -47,16 +48,18 @@ public class LoginStepDefs {
         new LoginPage().login(username, password);
     }
 
+    LoginPage loginPage = new LoginPage();
+
     @Given("the user logged in with username as {string} and password as {string}")
     public void the_user_logged_in_with_username_as_and_password_as(String username, String password) {
-        LoginPage loginPage = new LoginPage();
+
         loginPage.login(username, password);
     }
 
     DashBoard dashBoard = new DashBoard();
 
-    @Then("the user should be see {string} discuss module as dashboard")
-    public void theUserShouldBeSeeDiscussModuleAsDashboard(String expectedIndicator) {
+    @Then("account holder name should be {string}")
+    public void accountHolderNameShouldBe(String expectedIndicator) {
 
         String actualIndicator = dashBoard.userName_dashboard.getText();
 
@@ -74,6 +77,10 @@ public class LoginStepDefs {
     }
 
 
-
-
+    @When("the user is login using {string} and {string}")
+    public void theUserIsLoginUsingAnd(String userName, String password) {
+        loginPage.txt_userName.sendKeys(userName);
+        loginPage.txt_password.sendKeys(password);
+        loginPage.btn_login.click();
+    }
 }
