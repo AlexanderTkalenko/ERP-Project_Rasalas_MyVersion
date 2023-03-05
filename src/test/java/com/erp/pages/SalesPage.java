@@ -21,6 +21,14 @@ public class SalesPage {
     public List<WebElement> salesQuotationColumnsList;
 
 
+    @FindBy(xpath = "//th[@class='o_list_record_selector']//input[@type='checkbox']")
+    public WebElement quotationNumberCheckBoxButton;
+
+
+    @FindBy(xpath = "//div[@class='o_checkbox']//input[@type='checkbox']")
+    public List<WebElement> quotationNumbersCheckBoxesList;
+
+
 
 
 

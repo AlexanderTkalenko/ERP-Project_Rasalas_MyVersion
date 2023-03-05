@@ -27,7 +27,7 @@ public class PointOfSalePage {
 
 
 
-    @FindBy(xpath = "//input[@type='checkbox']")
+    @FindBy(xpath = "//div[@class='o_content']//input[@type='checkbox']")
     public List<WebElement> orderReferenceCheckBoxList;
 
 

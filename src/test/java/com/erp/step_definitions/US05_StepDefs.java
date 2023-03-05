@@ -25,18 +25,12 @@ public class US05_StepDefs {
     @Then("all the orders should be checked")
     public void all_the_orders_should_be_checked() {
 
-        //pointOfSalePage.orderReferenceCheckBoxList.remove(0);
-        //pointOfSalePage.orderReferenceCheckBoxList.remove(0);
-
 
         for (WebElement each : pointOfSalePage.orderReferenceCheckBoxList){
             Assert.assertTrue(each.isSelected());
         }
 
-        System.out.println(pointOfSalePage.orderReferenceCheckBoxList.size());
     }
-
-
 
 
 

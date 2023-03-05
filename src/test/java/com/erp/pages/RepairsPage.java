@@ -16,10 +16,16 @@ public class RepairsPage {
     @FindBy(xpath = "//span[normalize-space()='Repairs']")
     public WebElement repairsPageItself;
 
-    @FindBy(xpath = "")
+    @FindBy(xpath = "//th[@class='o_column_sortable']")
     public List<WebElement> repairsOrderColumnsList;
 
 
+    @FindBy(xpath = "//th[@class='o_list_record_selector']//input[@type='checkbox']")
+    public WebElement repairReferenceCheckBox;
+
+
+    @FindBy(xpath = "//div[@class='o_content']//input[@type='checkbox']")
+    public List<WebElement> repairRefAllCheckBoxesList;
 
 
 }
