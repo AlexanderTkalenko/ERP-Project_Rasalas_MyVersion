@@ -14,17 +14,14 @@ public class DashBoard {
     }
 
 
-    @FindBy(xpath = "//ul[@class='nav navbar-nav navbar-left oe_application_menu_placeholder']/li")
-    public List<WebElement> menus_modules;
-
-
-    @FindBy(xpath = "//li[contains(@class, 'o_user_menu')]")
-    public WebElement userNameDropDown;
-
     @FindBy(xpath = "//a[@data-menu='logout']")
     public WebElement btn_logOut;
 
     @FindBy(xpath = "//span[@class='oe_topbar_name']")
     public WebElement userName_dashboard;
+
+    @FindBy(xpath = "//a[@data-menu='documentation']")
+    public WebElement documentationButton;
+
 
 }

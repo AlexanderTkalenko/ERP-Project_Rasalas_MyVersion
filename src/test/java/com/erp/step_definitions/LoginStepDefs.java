@@ -27,7 +27,7 @@ public class LoginStepDefs {
             username = ConfigurationReader.getProperty("pos.manager.username");
             password = ConfigurationReader.getProperty("pos.manager.password");
 
-        } else if (userType.equalsIgnoreCase("crmmanager")) {
+        } else if (userType.equalsIgnoreCase("crmmanager") || userType.equalsIgnoreCase("Eventmanager")) {
             username = ConfigurationReader.getProperty("crm.manager.username");
             password = ConfigurationReader.getProperty("crm.manager.password");
 
