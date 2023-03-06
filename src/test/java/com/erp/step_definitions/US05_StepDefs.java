@@ -4,6 +4,9 @@ import com.erp.pages.PointOfSalePage;
 import io.cucumber.java.en.*;
 import org.junit.Assert;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
+
+import java.util.List;
 
 public class US05_StepDefs {
 
@@ -33,5 +36,10 @@ public class US05_StepDefs {
     }
 
 
+    @Then("the user should be able see Action drop down has 3 options")
+    public void theUserShouldBeAbleSeeActionDropDownHasOptions() {
 
+
+
+    }
 }

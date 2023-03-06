@@ -16,9 +16,9 @@ public class US01_StepDefs {
 
 
     @Then("the user should verify {int} columns of quotation")
-    public void the_user_should_verify_columns_of_quotation(Integer numberColumns) {
+    public void the_user_should_verify_columns_of_quotation(int numberColumns) {
 
-        Assert.assertTrue(salesPage.salesQuotationColumnsList.size() == numberColumns);
+        Assert.assertEquals(salesPage.salesQuotationColumnsList.size(), numberColumns);
 
     }
 

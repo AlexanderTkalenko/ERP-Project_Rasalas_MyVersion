@@ -1,3 +1,4 @@
+@us01
 Feature: the user should see quotation columns on Sales page
   Agile story: As a POS and Sales manager, the user should be able to get correct information on the Sales page
 

@@ -1,3 +1,4 @@
+@us02
 Feature: the user should see repair orders columns on the Repairs page
   Agile story: As a POS and Sales manager, the user should be able to get correct information on the Repairs page
 

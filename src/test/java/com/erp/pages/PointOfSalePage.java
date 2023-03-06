@@ -31,5 +31,11 @@ public class PointOfSalePage {
     public List<WebElement> orderReferenceCheckBoxList;
 
 
+    @FindBy(xpath = "//a[@data-section='other']")
+    public List<WebElement> actionDropDownList;
+
+
+    @FindBy(xpath = "//a[normalize-space()='Export']\n")
+    public WebElement exportOption;
 
 }

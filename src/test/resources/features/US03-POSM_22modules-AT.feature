@@ -1,3 +1,4 @@
+@us03
 Feature: user should verify number of modules
 
 

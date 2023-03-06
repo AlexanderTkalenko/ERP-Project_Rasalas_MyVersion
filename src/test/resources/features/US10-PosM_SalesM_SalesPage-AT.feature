@@ -1,3 +1,4 @@
+@us10
 Feature: user should be able to manage quotation on the Sales page
 
 

@@ -17,10 +17,6 @@ public class US10_StepDefs {
             Assert.assertTrue(each.isSelected());
         }
 
-        System.out.println(salesPage.quotationNumbersCheckBoxesList.size());
-
-
-
     }
 
 
