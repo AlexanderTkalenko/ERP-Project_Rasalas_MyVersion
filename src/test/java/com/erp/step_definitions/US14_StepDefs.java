@@ -5,8 +5,12 @@ import io.cucumber.java.en.*;
 import org.joda.time.DateTime;
 import org.joda.time.LocalTime;
 import org.junit.Assert;
+import org.openqa.selenium.WebElement;
 
 import java.sql.Time;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Timer;
 
 public class US14_StepDefs {
@@ -44,12 +48,15 @@ public class US14_StepDefs {
     @Then("verify time increase by one hour")
     public void verifyTimeIncreaseByOneHour() {
 
-        //String actualEnds = ""+calendarPage.timeLine0_23List.get(calendarPage.timeLine0_23List.size()-1).getText();
+        List<String> expectedHoursList = new ArrayList<>(Arrays.asList("0:00","1:00","2:00","3:00","4:00","5:00","6:00","7:00","8:00","9:00","10:00","11:00","12:00","13:00","14:00","15:00","16:00","17:00","18:00","19:00","20:00","21:00","22:00","23:00"));
 
-        //System.out.println(actualEnds);
+        List<String> actualHoursList = new ArrayList<>();
 
+        for (WebElement each : calendarPage.timeLine0_23List) {
+            actualHoursList.add(each.getText());
+        }
 
-
+        Assert.assertEquals(actualHoursList, expectedHoursList);
 
     }
 }
