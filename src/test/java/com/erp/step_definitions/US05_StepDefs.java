@@ -6,6 +6,7 @@ import org.junit.Assert;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class US05_StepDefs {
@@ -39,7 +40,16 @@ public class US05_StepDefs {
     @Then("the user should be able see Action drop down has 3 options")
     public void theUserShouldBeAbleSeeActionDropDownHasOptions() {
 
+        List<String> expectedList = List.of(new String[]{"Import", "Export", "Delete"});
+        List<String> actionOptionsTextList = new ArrayList<>();
 
+        pointOfSalePage.actionButton.click();
+
+        for (WebElement each : pointOfSalePage.actionOptionsList) {
+            actionOptionsTextList.add(each.getText());
+        }
+
+        Assert.assertEquals(actionOptionsTextList, expectedList);
 
     }
 }

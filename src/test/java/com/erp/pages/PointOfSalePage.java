@@ -26,16 +26,18 @@ public class PointOfSalePage {
     public WebElement orderReferenceCheckBox;
 
 
+    @FindBy(xpath = "//button[normalize-space()='Action']")
+    public WebElement actionButton;
+
+
 
     @FindBy(xpath = "//div[@class='o_content']//input[@type='checkbox']")
     public List<WebElement> orderReferenceCheckBoxList;
 
 
-    @FindBy(xpath = "//a[@data-section='other']")
-    public List<WebElement> actionDropDownList;
+    @FindBy(xpath = "//div[@class='btn-group o_dropdown open']//li")
+    public List<WebElement> actionOptionsList;
 
 
-    @FindBy(xpath = "//a[normalize-space()='Export']\n")
-    public WebElement exportOption;
 
 }
