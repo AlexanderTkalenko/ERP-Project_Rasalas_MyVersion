@@ -10,13 +10,6 @@ import org.junit.Assert;
 
 public class modulesStepDefs {
 
-
-
-    @Given("the user is on login page")
-    public void the_user_is_oo_login_page() {
-        Driver.getDriver().get(ConfigurationReader.getProperty("env.url"));
-    }
-
     LoginPage loginPage = new LoginPage();
 
     @Given("the user is logged in as POSmanager")
